@@ -22,7 +22,7 @@
           <tabbar-item icon="home-o">标签1</tabbar-item>
           <tabbar-item icon="search">标签2</tabbar-item>
           <tabbar-item icon="friends-o">标签3</tabbar-item>
-          <tabbar-item icon="setting-o">标签4</tabbar-item>
+          <tabbar-item icon="setting-o">我的</tabbar-item>
         </tabbar>
       </div>
     </lazy-component>

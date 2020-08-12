@@ -96,29 +96,15 @@ router.beforeEach((to, from, next) => {
   }
   // 获取用户登录状态
   let isLogin = localStorage.getItem("token");
-  // 注销
-  if (to.path == '/logout') {
-    // 清空
-    sessionStorage.clear();
-    // 跳转到登录
-    next({
-      path: '/login'
-    });
-  }
+  
   // 如果请求的是登录页
-  else if (to.path == '/login') {
+  if (to.path == '/login') {
     if (isLogin != null) {
       // 跳转到首页
       next({
         path: '/index'
       });
     }
-  } // 如果为非登录状态
-  else if (isLogin == null) {
-    // 跳转到登录页
-    next({
-      path: '/login'
-    });
   }
   next()
 })

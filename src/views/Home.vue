@@ -80,7 +80,7 @@ export default {
   },
   watch: {/**监听data数据变化*/ },
   created() {/**创建组件时执行(加载完成之前执行可以调用this,主要预处理数据)*/
-    console.log(`create`);
+    // console.log(`Home-create`);
     this.$request.mtnhao.index.bannerList().then((res)=>{
       this.bannerList = res.data.banners;
     })
@@ -166,6 +166,7 @@ export default {
   beforeDestroy() {/**生命周期 - 销毁之前*/},
   destroyed() {/**生命周期 - 销毁完成*/},
   activated() {/**keep-alive组件激活时调用。仅针对keep-alive组件有效*/ 
+    // console.log(`Home-activated`);
   },
   deactivated() {/**keep-alive组件停用时调用。仅针对keep-alive组件有效*/ 
     

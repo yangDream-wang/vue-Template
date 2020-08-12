@@ -23,7 +23,8 @@ export default {
   name:'Login',
   data() {
     return {
-
+      /**你从哪来 */
+      from1:{},
     };
   },
   computed: {/**计算属性*/ },
@@ -38,8 +39,8 @@ export default {
       username: 'this is name',
       avatarUrl: 'this is avarUrl'})
       .then((res)=>{
-        localStorage.setItem("token","this is a token");
-        this.$router.replace('/')
+        localStorage.setItem("token","fjkioare23kljofuvxoc");
+        this.$router.go(-1)
       })
     },
   },

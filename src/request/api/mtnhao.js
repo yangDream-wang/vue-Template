@@ -16,6 +16,12 @@ const index = {
     return axios.get(`/personalized?limit=${limit}&offset=${page}`);
   },
 }
+const detail = {
+  /**歌曲详情 */
+  songDetail(id){
+    return axios.get(`/song/detail?ids=347230`);
+  }
+}
 export default {
-  index,
+  index, detail
 };
