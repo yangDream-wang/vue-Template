@@ -10,7 +10,9 @@
   修改时间：
 -->
 <template>
-  <div class='Login'>Login</div>
+  <div class='Login'>
+    <van-button type="primary" size="large" @click.stop="clickLogin">登录</van-button>
+  </div>
 </template>
 <script>
 //这里可以import(导入)其他文件（比如：组件，工具js，第三方插件js，json文件，图片文件等等）
@@ -30,7 +32,16 @@ export default {
 
   },
   methods: {/**所有方法*/
-
+    clickLogin(){
+      this.$store.dispatch('updataUser',
+      {token: 'fjkioare23kljofuvxoc',
+      username: 'this is name',
+      avatarUrl: 'this is avarUrl'})
+      .then((res)=>{
+        localStorage.setItem("token","this is a token");
+        this.$router.replace('/')
+      })
+    },
   },
   mounted() {/**加载完组件时执行(加载完成之后执行)*/ },
   beforeCreate() {/**生命周期 - 创建之前*/},

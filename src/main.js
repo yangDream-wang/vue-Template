@@ -7,8 +7,10 @@ Vue.prototype.$request = request;
 import {
   Lazyload,
   Toast,
+  Button
 } from 'vant'
-Vue.use(Toast,).use(Lazyload,{
+import 'vant/lib/button/style';
+Vue.use(Toast).use(Button).use(Lazyload, {
   lazyComponent: true,
   // loading: require('./assets/images/common/placeholder.gif')
 })
@@ -21,12 +23,6 @@ FastClick.attach(document.body);/** */
 Vue.config.productionTip = false;
 /*********************************** */
 
-/*******路由发生变化修改页面title***** */
-router.beforeEach((to, from, next) => {
-  if (to.meta.title) { document.title = to.meta.title }
-  next()
-})
-/*********************************** */
 new Vue({
   router,
   store,

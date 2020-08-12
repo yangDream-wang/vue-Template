@@ -11,7 +11,6 @@
 -->
 <template>
   <div class='Index'>
-    
     <!-- 缓存所有的页面 -->
     <keep-alive>
       <router-view v-if="$route.meta.keepAlive"></router-view>
@@ -31,10 +30,10 @@
 </template>
 <script>
 //这里可以import(导入)其他文件（比如：组件，工具js，第三方插件js，json文件，图片文件等等）
-import { Tabbar, TabbarItem,Button } from 'vant';
-import 'vant/lib/button/style';
+import { Tabbar, TabbarItem, } from 'vant';
+
 export default {
-  components: {Tabbar, TabbarItem,'vant-button':Button,},
+  components: {Tabbar, TabbarItem,},
   props:{/**接受父组件传值*/ },
   name:'Index',
   data() {
